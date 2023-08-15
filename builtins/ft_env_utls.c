@@ -6,7 +6,7 @@
 /*   By: sbzizal <sbzizal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/06 16:49:22 by sbzizal           #+#    #+#             */
-/*   Updated: 2023/08/06 16:50:19 by sbzizal          ###   ########.fr       */
+/*   Updated: 2023/08/15 18:07:06 by sbzizal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,9 @@ void	fill_myenv_manual(t_env **myenv, t_var *var, char *key, char *value)
 	ft_lstadd_back(myenv, creat_list(key, value));
 	key = ft_strdup("_=");
 	value = ft_strdup("/usr/bin/env");
+	ft_lstadd_back(myenv, creat_list(key, value));
+	key = ft_strdup("?=");
+	value = ft_strdup("0");
 	ft_lstadd_back(myenv, creat_list(key, value));
 }
 

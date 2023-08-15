@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aennaouh <aennaouh@student.42.fr>          +#+  +:+       +#+         #
+#    By: sbzizal <sbzizal@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/26 10:21:54 by sbzizal           #+#    #+#              #
-#    Updated: 2023/08/14 12:53:32 by aennaouh         ###   ########.fr        #
+#    Updated: 2023/08/15 18:09:03 by sbzizal          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,10 @@ OFILES = ${CFILES:.c=.o}
 all: $(NAME)
 
 $(NAME): $(OFILES) minishell.h
-	$(CC) $(CFLAGS) $(OFILES) -o $(NAME) -lreadline -L/Users/aennaouh/.brew/opt/readline/lib
+	$(CC) $(CFLAGS) $(OFILES) -o $(NAME) -lreadline -L/Users/sbzizal/.brew/opt/readline/lib
 
 %.o: %.c minishell.h
-	$(CC) $(CFLAGS) -I/Users/aennaouh/.brew/opt/readline/include -c $< -o $@
+	$(CC) $(CFLAGS) -I/Users/sbzizal/.brew/opt/readline/include -c $< -o $@
 
 clean:
 	rm -f $(OFILES)

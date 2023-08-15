@@ -6,7 +6,7 @@
 /*   By: sbzizal <sbzizal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:50:39 by sbzizal           #+#    #+#             */
-/*   Updated: 2023/08/13 15:21:57 by sbzizal          ###   ########.fr       */
+/*   Updated: 2023/08/15 18:08:42 by sbzizal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ void	ft_print_1(t_exp *temp)
 {
 	while (temp)
 	{
-		if (!ft_strcmp(temp->name, "PATH="))
+		if (!ft_strcmp(temp->name, "PATH=") || !ft_strcmp(temp->name, "?=")
+			|| !ft_strcmp(temp->name, "_="))
 		{
 			temp = temp->next;
 			continue ;

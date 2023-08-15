@@ -6,7 +6,7 @@
 /*   By: sbzizal <sbzizal@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 11:47:05 by sbzizal           #+#    #+#             */
-/*   Updated: 2023/08/06 16:50:08 by sbzizal          ###   ########.fr       */
+/*   Updated: 2023/08/15 18:08:24 by sbzizal          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,11 @@ void	print_env_part(t_env *myenv)
 	while (myenv)
 	{
 		if (!ft_strcmp(myenv->key, "PATH=") || !myenv->value)
+		{
+			myenv = myenv->next;
+			continue ;
+		}
+		if (!ft_strcmp(myenv->key, "?="))
 		{
 			myenv = myenv->next;
 			continue ;
